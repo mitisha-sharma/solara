@@ -1,16 +1,34 @@
-# React + Vite
+# Solara – Solar Panel Optimization System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Solara is a full-stack web application designed to optimize solar panel efficiency using image analysis. The platform allows users to upload images of solar panels and determine whether they are clean or dirty, along with identifying the type of dirt affecting performance.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+* Upload solar panel images
+* Detect if panel is clean or dirty
+* Identify type of dirt (dust, bird droppings, etc.)
+* Backend integration for processing and analysis
+* Clean, responsive UI built with modern frontend tools
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Frontend: React (Vite), Tailwind CSS, JavaScript
+* Backend: Python (API for image processing and classification)
+
+---
+
+## Live Demo
+
+[https://mitisha-sharma.github.io/solara/](https://mitisha-sharma.github.io/solara/)
+
+---
+
+## About
+
+This project is part of my Software Engineering work and focuses on combining frontend development with backend processing to solve real-world problems in renewable energy optimization.
+
+---
