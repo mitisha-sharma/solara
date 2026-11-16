@@ -168,7 +168,7 @@ export default function Login() {
     // Simulate API call
     setTimeout(() => {
       if (email === DEMO_EMAIL && password === DEMO_PASSWORD) {
-        navigate('/home');
+        navigate('/dashboard');
       } else {
         setLoading(false);
         setError('Invalid credentials. Try admin@solara.io / solara2025');

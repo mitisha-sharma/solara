@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import AppLayout    from './components/layout/AppLayout';
 import Login        from './pages/Login';
-import Landing      from './pages/Landing';
+import Journal      from './pages/Journal';
 import Dashboard    from './pages/Dashboard';
 import Upload       from './pages/Upload';
 import Prediction   from './pages/Prediction';
@@ -9,11 +9,12 @@ import Recommendations from './pages/Recommendations';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <Routes>
         {/* ── Public ── */}
-        <Route path="/"     element={<Login   />} />
-        <Route path="/home" element={<Landing />} />
+        <Route path="/"      element={<Journal />} />
+        <Route path="/login" element={<Login   />} />
+        <Route path="/home"  element={<Navigate to="/" replace />} />
 
         {/* ── App (with Navbar + Sidebar) ── */}
         <Route element={<AppLayout />}>

@@ -11,7 +11,7 @@ const appNavLinks = [
 
 export default function Navbar() {
   const location  = useLocation();
-  const isLogin   = location.pathname === '/';
+  const isLogin   = location.pathname === '/login';
   const isLanding = location.pathname === '/home';
   const isApp     = !isLogin && !isLanding;
 
@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="h-full flex items-center px-4 gap-4">
 
         {/* Logo */}
-        <Link to="/home" className="flex items-center gap-2 shrink-0 min-w-[140px]">
+        <Link to="/" className="flex items-center gap-2 shrink-0 min-w-[140px]">
           {isApp && (
             <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-sun-300 to-sun-500 flex items-center justify-center shadow-sun">
               <Zap size={15} className="text-primary-900" strokeWidth={2.5} />
