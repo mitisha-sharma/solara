@@ -60,7 +60,7 @@ function SolarPanelCard() {
                 height: 44,
                 borderRadius: 5,
                 background: 'linear-gradient(135deg, #0a1f4e 0%, #112660 100%)',
-                border: '1px solid rgba(59,91,219,0.3)',
+                border: '1px solid rgba(30,64,175,0.3)',
                 position: 'relative',
                 overflow: 'hidden',
               }}
@@ -69,7 +69,7 @@ function SolarPanelCard() {
               {[0,4,7].includes(i) && (
                 <div style={{
                   position: 'absolute', inset: 0,
-                  background: 'linear-gradient(90deg, transparent 0%, rgba(59,91,219,0.15) 50%, transparent 100%)',
+                  background: 'linear-gradient(90deg, transparent 0%, rgba(30,64,175,0.15) 50%, transparent 100%)',
                   backgroundSize: '200% 100%',
                   animation: `shimmer ${2 + i * 0.3}s linear infinite`,
                 }}/>
@@ -333,7 +333,7 @@ export default function Login() {
           top: '-20%', right: '-10%',
           width: 500, height: 500,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(59,91,219,0.05) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(30,64,175,0.05) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}/>
         <div style={{
@@ -365,8 +365,8 @@ export default function Login() {
 
           {/* Demo credentials hint */}
           <div style={{
-            background: '#EEF2FF',
-            border: '1px solid #C7D2FE',
+            background: '#EAF1FF',
+            border: '1px solid #BCD2FF',
             borderRadius: 10,
             padding: '11px 14px',
             marginBottom: 24,
@@ -376,7 +376,7 @@ export default function Login() {
             gap: 8,
           }}>
             <div>
-              <p style={{ fontSize: 12, fontWeight: 600, color: '#3B5BDB', marginBottom: 2 }}>
+              <p style={{ fontSize: 12, fontWeight: 600, color: '#1E40AF', marginBottom: 2 }}>
                 Demo credentials
               </p>
               <p style={{ fontSize: 11, color: '#64748B', fontFamily: 'monospace' }}>
@@ -387,16 +387,16 @@ export default function Login() {
               type="button"
               onClick={handleDemoLogin}
               style={{
-                fontSize: 11, fontWeight: 700, color: '#3B5BDB',
-                background: 'rgba(59,91,219,0.1)',
-                border: '1px solid rgba(59,91,219,0.2)',
+                fontSize: 11, fontWeight: 700, color: '#1E40AF',
+                background: 'rgba(30,64,175,0.1)',
+                border: '1px solid rgba(30,64,175,0.2)',
                 borderRadius: 6, padding: '4px 10px',
                 cursor: 'pointer', whiteSpace: 'nowrap',
                 fontFamily: "'Inter', sans-serif",
                 transition: 'all 0.15s',
               }}
-              onMouseEnter={e => e.target.style.background = 'rgba(59,91,219,0.18)'}
-              onMouseLeave={e => e.target.style.background = 'rgba(59,91,219,0.1)'}
+              onMouseEnter={e => e.target.style.background = 'rgba(30,64,175,0.18)'}
+              onMouseLeave={e => e.target.style.background = 'rgba(30,64,175,0.1)'}
             >
               Fill in
             </button>
@@ -499,7 +499,7 @@ export default function Login() {
                   onChange={e => setRememberMe(e.target.checked)}
                   style={{
                     width: 15, height: 15,
-                    accentColor: '#3B5BDB',
+                    accentColor: '#1E40AF',
                     borderRadius: 4,
                     cursor: 'pointer',
                   }}
@@ -510,14 +510,14 @@ export default function Login() {
                 type="button"
                 style={{
                   fontSize: 13, fontWeight: 600,
-                  color: '#3B5BDB', background: 'none',
+                  color: '#1E40AF', background: 'none',
                   border: 'none', cursor: 'pointer',
                   fontFamily: "'Inter', sans-serif",
                   padding: 0,
                   transition: 'color 0.15s',
                 }}
-                onMouseEnter={e => e.target.style.color = '#2F4AC7'}
-                onMouseLeave={e => e.target.style.color = '#3B5BDB'}
+                onMouseEnter={e => e.target.style.color = '#17307F'}
+                onMouseLeave={e => e.target.style.color = '#1E40AF'}
               >
                 Forgot password?
               </button>
@@ -574,7 +574,7 @@ export default function Login() {
                   transition: 'all 0.15s',
                   boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
                 }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = '#C7D2FE'; e.currentTarget.style.background = '#FAFBFF'; }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = '#BCD2FF'; e.currentTarget.style.background = '#FAFBFF'; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = '#E2E8F0'; e.currentTarget.style.background = '#fff'; }}
               >
                 <span style={{ fontSize: 15 }}>{icon}</span>
@@ -595,7 +595,7 @@ export default function Login() {
             <button
               type="button"
               style={{
-                color: '#3B5BDB', fontWeight: 600, fontSize: 12,
+                color: '#1E40AF', fontWeight: 600, fontSize: 12,
                 background: 'none', border: 'none',
                 cursor: 'pointer',
                 fontFamily: "'Inter', sans-serif",

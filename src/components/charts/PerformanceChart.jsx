@@ -42,7 +42,7 @@ export default function PerformanceChart({ height = 220 }) {
           {mockEnergyData.weekly.map((entry, i) => (
             <Cell
               key={i}
-              fill={entry.kwh === max ? '#3B5BDB' : '#C7D2FE'}
+              fill={entry.kwh === max ? '#1E40AF' : '#BCD2FF'}
             />
           ))}
         </Bar>

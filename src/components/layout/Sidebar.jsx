@@ -18,7 +18,7 @@ const bottomNav = [
 
 export default function Sidebar() {
   return (
-    <aside className="fixed top-navbar left-0 bottom-0 w-sidebar bg-surface border-r border-border z-40 hidden lg:flex flex-col">
+    <aside className="fixed top-navbar left-0 bottom-0 w-sidebar bg-white/70 backdrop-blur-xl border-r border-primary/10 z-40 hidden lg:flex flex-col">
 
       {/* ── Main Nav ── */}
       <nav className="flex-1 p-3 space-y-0.5 pt-4">

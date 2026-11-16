@@ -6,7 +6,7 @@ export default function SolarLoader({ message = 'Analyzing...', sub = 'Using AI 
         <div className="absolute inset-0 rounded-full border-4 border-primary-100" />
         <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-primary animate-spin" />
         <div className="absolute inset-2 rounded-full bg-primary-50 flex items-center justify-center">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B5BDB" strokeWidth="2.5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2.5">
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
           </svg>
         </div>

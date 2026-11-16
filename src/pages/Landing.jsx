@@ -31,7 +31,7 @@ export default function Landing() {
           top: '10%', right: '-5%',
           width: 700, height: 700,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(59,91,219,0.09) 0%, rgba(59,91,219,0.04) 40%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(30,64,175,0.09) 0%, rgba(30,64,175,0.04) 40%, transparent 70%)',
           pointerEvents: 'none',
         }}/>
         {/* Secondary glow — bottom left indigo */}
@@ -109,7 +109,7 @@ export default function Landing() {
               }}>
                 Welcome<br/>
                 to{' '}
-                <span style={{ color: '#3B5BDB' }}>Solara</span>
+                <span className="text-sun-gradient">Solara</span>
               </h1>
 
               <p style={{
@@ -127,18 +127,18 @@ export default function Landing() {
               <div style={{ display: 'flex', gap: 12, marginBottom: 52, flexWrap: 'wrap' }}>
                 <Link to="/dashboard" style={{
                   display: 'inline-flex', alignItems: 'center', gap: 8,
-                  background: '#3B5BDB',
+                  background: 'linear-gradient(135deg, #1E40AF 0%, #17307F 100%)',
+                  boxShadow: 'inset 0 -2px 0 rgba(245,166,35,0.9), 0 8px 22px rgba(30,64,175,0.32)',
                   color: '#fff',
                   fontWeight: 700,
                   fontSize: 14,
                   padding: '13px 24px',
                   borderRadius: 10,
-                  boxShadow: '0 4px 16px rgba(59,91,219,0.35)',
                   transition: 'all 0.15s',
                   letterSpacing: '-0.01em',
                 }}
-                onMouseEnter={e => { e.currentTarget.style.background = '#2F4AC7'; e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(59,91,219,0.45)'; }}
-                onMouseLeave={e => { e.currentTarget.style.background = '#3B5BDB'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(59,91,219,0.35)'; }}>
+                onMouseEnter={e => { e.currentTarget.style.background = '#17307F'; e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(30,64,175,0.45)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = '#1E40AF'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(30,64,175,0.35)'; }}>
                   Explore Your Dashboard
                 </Link>
                 <Link to="/upload" style={{
@@ -153,7 +153,7 @@ export default function Landing() {
                   boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
                   transition: 'all 0.15s',
                 }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = '#C7D2FE'; e.currentTarget.style.background = '#FAFBFF'; }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = '#BCD2FF'; e.currentTarget.style.background = '#FAFBFF'; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = '#E2E8F0'; e.currentTarget.style.background = '#fff'; }}>
                   How It Works
                 </Link>
@@ -166,7 +166,7 @@ export default function Landing() {
                     <p style={{
                       fontSize: 26,
                       fontWeight: 800,
-                      color: '#3B5BDB',
+                      color: '#1E40AF',
                       letterSpacing: '-0.02em',
                       lineHeight: 1,
                       marginBottom: 4,
@@ -202,7 +202,7 @@ export default function Landing() {
                 position: 'absolute',
                 width: 420, height: 420,
                 borderRadius: '50%',
-                border: '1px solid rgba(59,91,219,0.12)',
+                border: '1px solid rgba(30,64,175,0.12)',
                 top: '50%', left: '50%',
                 transform: 'translate(-50%,-50%)',
                 pointerEvents: 'none',
@@ -211,7 +211,7 @@ export default function Landing() {
                 position: 'absolute',
                 width: 340, height: 340,
                 borderRadius: '50%',
-                border: '1px solid rgba(59,91,219,0.07)',
+                border: '1px solid rgba(30,64,175,0.07)',
                 top: '50%', left: '50%',
                 transform: 'translate(-50%,-50%)',
                 pointerEvents: 'none',
@@ -222,7 +222,7 @@ export default function Landing() {
                 width: 340,
                 borderRadius: 20,
                 overflow: 'hidden',
-                boxShadow: '0 24px 64px rgba(15,23,42,0.18), 0 8px 20px rgba(59,91,219,0.12)',
+                boxShadow: '0 24px 64px rgba(15,23,42,0.18), 0 8px 20px rgba(30,64,175,0.12)',
                 animation: 'float 6s ease-in-out infinite',
                 position: 'relative',
               }}>
@@ -236,7 +236,7 @@ export default function Landing() {
                   {/* Subtle inner glow */}
                   <div style={{
                     position: 'absolute', inset: 0,
-                    background: 'radial-gradient(ellipse at 80% 20%, rgba(59,91,219,0.3) 0%, transparent 60%)',
+                    background: 'radial-gradient(ellipse at 80% 20%, rgba(30,64,175,0.3) 0%, transparent 60%)',
                     pointerEvents: 'none',
                   }}/>
 
@@ -263,7 +263,7 @@ export default function Landing() {
                         height: 48,
                         borderRadius: 6,
                         background: 'linear-gradient(145deg, #0c1f4a 0%, #142d68 100%)',
-                        border: '1px solid rgba(59,91,219,0.35)',
+                        border: '1px solid rgba(30,64,175,0.35)',
                         position: 'relative',
                         overflow: 'hidden',
                       }}>
@@ -272,13 +272,13 @@ export default function Landing() {
                           position: 'absolute',
                           top: '50%', left: 0, right: 0,
                           height: 1,
-                          background: 'rgba(59,91,219,0.2)',
+                          background: 'rgba(30,64,175,0.2)',
                         }}/>
                         <div style={{
                           position: 'absolute',
                           left: '50%', top: 0, bottom: 0,
                           width: 1,
-                          background: 'rgba(59,91,219,0.2)',
+                          background: 'rgba(30,64,175,0.2)',
                         }}/>
                         {/* Shimmer on select cells */}
                         {[1,5,8].includes(i) && (
@@ -395,10 +395,10 @@ export default function Landing() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <div style={{
                     width: 28, height: 28, borderRadius: 8,
-                    background: '#EEF2FF', border: '1px solid #C7D2FE',
+                    background: '#EAF1FF', border: '1px solid #BCD2FF',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                   }}>
-                    <TrendingUp size={14} color="#3B5BDB" />
+                    <TrendingUp size={14} color="#1E40AF" />
                   </div>
                   <div>
                     <p style={{ fontSize: 9, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 1 }}>AI Score</p>
@@ -468,11 +468,11 @@ export default function Landing() {
             onMouseLeave={e => { e.currentTarget.style.boxShadow = ''; e.currentTarget.style.transform = ''; }}>
               <div style={{
                 width: 36, height: 36, borderRadius: 10,
-                background: '#EEF2FF', border: '1px solid #C7D2FE',
+                background: '#EAF1FF', border: '1px solid #BCD2FF',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 marginBottom: 16,
               }}>
-                <Activity size={17} color="#3B5BDB" />
+                <Activity size={17} color="#1E40AF" />
               </div>
               <h3 style={{ fontSize: 16, fontWeight: 700, color: '#0F172A', marginBottom: 8 }}>
                 Predictive Analysis
@@ -485,7 +485,7 @@ export default function Landing() {
                 <svg width="160" height="60" viewBox="0 0 160 60">
                   <polyline
                     points="0,50 22,38 44,44 68,20 90,28 110,10 136,16 160,4"
-                    fill="none" stroke="#3B5BDB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+                    fill="none" stroke="#1E40AF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
                   />
                 </svg>
               </div>
@@ -493,7 +493,7 @@ export default function Landing() {
 
             {/* Instant Response — accent blue */}
             <div style={{
-              background: 'linear-gradient(135deg, #2563eb 0%, #3B5BDB 50%, #4f46e5 100%)',
+              background: 'linear-gradient(135deg, #0B1B3A 0%, #17307F 55%, #D9850B 130%)',
               borderRadius: 16,
               padding: '28px 24px',
               position: 'relative',
@@ -629,7 +629,7 @@ export default function Landing() {
             fontWeight: 800,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
-            color: '#3B5BDB',
+            color: '#1E40AF',
             marginBottom: 16,
           }}>SOLARA</p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 32, marginBottom: 20 }}>

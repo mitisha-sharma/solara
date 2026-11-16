@@ -10,7 +10,7 @@ import { mockDashboardStats, mockWeather, mockEnergyData } from '../data/mockDat
 const tabs = ['Daily', 'Weekly', 'Monthly'];
 
 const sitePerformance = [
-  { name: 'Site Alpha – Mojave',  output: 452, bars: [0.6,0.8,0.7,0.9,1.0,0.8,0.9], color: '#3B5BDB' },
+  { name: 'Site Alpha – Mojave',  output: 452, bars: [0.6,0.8,0.7,0.9,1.0,0.8,0.9], color: '#1E40AF' },
   { name: 'Site Beta – Sonora',   output: 389, bars: [0.4,0.6,0.5,0.7,0.8,0.6,0.5], color: '#94A3B8' },
   { name: 'Site Gamma – Sahra',   output: 412, bars: [0.5,0.7,0.6,0.8,0.9,0.7,0.6], color: '#F59E0B' },
 ];

@@ -28,7 +28,7 @@ export default function EnergyChart({ height = 240 }) {
       <LineChart data={mockEnergyData.hourly} margin={{ top: 4, right: 4, left: -24, bottom: 0 }}>
         <defs>
           <linearGradient id="lineGradBlue" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%"   stopColor="#3B5BDB" />
+            <stop offset="0%"   stopColor="#1E40AF" />
             <stop offset="100%" stopColor="#6366F1" />
           </linearGradient>
         </defs>
@@ -73,10 +73,10 @@ export default function EnergyChart({ height = 240 }) {
           type="monotone"
           dataKey="predicted"
           name="Predicted"
-          stroke="#3B5BDB"
+          stroke="#1E40AF"
           strokeWidth={2.5}
           dot={false}
-          activeDot={{ r: 5, fill: '#3B5BDB', strokeWidth: 2, stroke: '#fff' }}
+          activeDot={{ r: 5, fill: '#1E40AF', strokeWidth: 2, stroke: '#fff' }}
         />
       </LineChart>
     </ResponsiveContainer>

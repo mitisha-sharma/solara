@@ -4,7 +4,7 @@ import Sidebar from './Sidebar';
 
 export default function AppLayout() {
   return (
-    <div className="min-h-screen bg-page">
+    <div className="min-h-screen">
       <Navbar />
       <Sidebar />
       <main className="pt-navbar lg:pl-sidebar">

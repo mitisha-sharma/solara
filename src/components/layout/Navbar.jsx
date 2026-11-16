@@ -19,18 +19,18 @@ export default function Navbar() {
   if (isLogin) return null;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-navbar bg-surface border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 h-navbar bg-white/75 backdrop-blur-xl border-b border-primary/10 shadow-[0_1px_0_rgba(245,166,35,0.35)]">
       <div className="h-full flex items-center px-4 gap-4">
 
         {/* Logo */}
         <Link to="/home" className="flex items-center gap-2 shrink-0 min-w-[140px]">
           {isApp && (
-            <div className="w-7 h-7 rounded-md bg-primary flex items-center justify-center shadow-primary-sm">
-              <Zap size={14} className="text-white" strokeWidth={2.5} />
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-sun-300 to-sun-500 flex items-center justify-center shadow-sun">
+              <Zap size={15} className="text-primary-900" strokeWidth={2.5} />
             </div>
           )}
           <div>
-            <p className={clsx('font-bold leading-none', isLanding ? 'text-base text-ink-900' : 'text-sm text-ink-900')}>
+            <p className={clsx('font-display font-extrabold tracking-tight leading-none', isLanding ? 'text-base text-ink-900' : 'text-sm text-ink-900')}>
               Solara
             </p>
             {isApp && (
