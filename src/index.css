@@ -9,6 +9,7 @@
   *, *::before, *::after { box-sizing: border-box; }
 
   html {
+    --sky-top: 59 148 238; --sky-bottom: 169 218 255; --sun-f: 1;
     scroll-behavior: smooth;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
@@ -16,14 +17,10 @@
 
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    background-color: #F3F6FC;
-    background-image:
-      radial-gradient(900px 420px at 88% -8%, rgba(245,166,35,0.16), transparent 60%),
-      radial-gradient(800px 500px at -10% 0%, rgba(30,64,175,0.10), transparent 60%),
-      linear-gradient(rgba(30,64,175,0.045) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(30,64,175,0.045) 1px, transparent 1px);
-    background-size: auto, auto, 44px 44px, 44px 44px;
-    background-attachment: fixed;
+    background-color: #F6F4EF;
+    /* page tint follows the sky colour set by SkyContext */
+    background-image: linear-gradient(180deg, rgb(var(--sky-bottom) / 0.38) 0, rgb(var(--sky-bottom) / 0.10) 360px, transparent 640px);
+    background-repeat: no-repeat;
     color: #0F172A;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -373,3 +370,14 @@
 }
 .sun-glow { box-shadow: 0 0 60px rgba(245,166,35,0.35); }
 ::selection { background: #FFE180; color: #0B1B3A; }
+
+/* ─── Sun-path theme ──────────────────────────────────────────────── */
+.s-card { border-radius: 24px; background: rgba(255,255,255,0.9); }
+/* Array tiles glow in proportion to the sun's height */
+.panel-cell {
+  box-shadow: 0 0 calc(14px * var(--sun-f)) rgba(245,166,35, calc(0.7 * var(--sun-f)));
+  filter: saturate(calc(0.55 + 0.45 * var(--sun-f)));
+}
+.sun-range { -webkit-appearance: none; appearance: none; height: 4px; border-radius: 99px; background: rgba(255,255,255,0.35); outline: none; }
+.sun-range::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #FFD04D; border: 3px solid #fff; box-shadow: 0 0 12px rgba(255,190,31,0.9); cursor: grab; }
+.sun-range::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: #FFD04D; border: 3px solid #fff; box-shadow: 0 0 12px rgba(255,190,31,0.9); cursor: grab; }

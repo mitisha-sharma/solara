@@ -5,6 +5,7 @@ import StatCard from '../components/ui/StatCard';
 import PageHeader from '../components/ui/PageHeader';
 import PerformanceChart from '../components/charts/PerformanceChart';
 import Badge from '../components/ui/Badge';
+import { useSky } from '../context/SkyContext';
 import { mockDashboardStats, mockWeather, mockEnergyData } from '../data/mockData';
 
 const tabs = ['Daily', 'Weekly', 'Monthly'];
@@ -36,6 +37,7 @@ function MiniBarChart({ bars, color }) {
 
 export default function Dashboard() {
   const s = mockDashboardStats;
+  const { sky } = useSky();
   const [activeTab, setActiveTab] = useState('Daily');
 
   return (
@@ -76,7 +78,7 @@ export default function Dashboard() {
         </StatCard>
 
         {/* Current Output */}
-        <StatCard label="Current Output" value="1.2" unit="MW">
+        <StatCard label="Current Output" value={(1.2 * sky.factor).toFixed(2)} unit="MW">
           <p className="text-xs text-ink-400 mt-2 flex items-center gap-1.5">
             <span className="s-dot-blue animate-pulse-dot" />
             Live data streaming
@@ -178,7 +180,7 @@ export default function Dashboard() {
               <div
                 key={i}
                 title={`Panel ${String.fromCharCode(65+Math.floor(i/6))}${(i%6)+1}`}
-                className={`aspect-square rounded flex items-center justify-center text-2xs font-bold cursor-pointer hover:scale-110 transition-transform border
+                className={`panel-cell aspect-square rounded flex items-center justify-center text-2xs font-bold cursor-pointer hover:scale-110 transition-transform border
                   ${isFault  ? 'bg-status-redBg    border-status-redBorder   text-status-red'
                   : isDirty  ? 'bg-status-yellowBg border-status-yellowBorder text-status-yellow'
                   :            'bg-status-greenBg  border-status-greenBorder  text-status-green'}`}
